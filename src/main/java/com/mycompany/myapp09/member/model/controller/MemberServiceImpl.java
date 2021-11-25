@@ -10,7 +10,8 @@ public class MemberServiceImpl implements MemberService {
 	
 	@Autowired
 	public MemberDAO memberDAO;
-	public int idCheck() throws Exception {
-		return memberDAO.idCheck();
+	@Override
+	public int idCheck(String id) throws Exception {
+		return memberDAO.idCheck(id);
 	}
 }
